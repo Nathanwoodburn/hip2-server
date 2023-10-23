@@ -109,3 +109,11 @@ recovery wallet before rescanning. After the hip2-server serves `0x7fffffff`
 addresses, it will start over at index `0` and recycle. The `log/hip2-index`
 file will continue to increment, so users should also take action if they see
 the value in that file exceed `2147483647`.
+
+
+### Docker (experimental)
+
+```
+sudo docker build -t hip2-server .
+sudo docker run -p 3000:3000 -v ~/Downloads/xpub:/app/conf/xpub hip2-server
+```
